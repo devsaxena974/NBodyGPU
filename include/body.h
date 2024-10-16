@@ -4,6 +4,14 @@
 // Create a class for the body system that can
 //  be extended to GPU and CPU classes
 
+enum NBodyConfig {
+    NBODY_CONFIG_RANDOM,
+    NBODY_CONFIG_EXPAND
+};
+
+// utility function to randomly initialize the bodies
+void randomizeBodies(NBodyConfig cfg, float* pos, float* vel, float* color, float clusterScale, float velocityScale, int numBodies);
+
 class Body {
     public:
         // constructor
